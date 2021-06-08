@@ -5,8 +5,6 @@ const getProvinces = () => {
     fetch(json_provinces).then(function (response) {
         return response.json();
     }).then(function (obj) {
-        console.log('obj---> ' + obj);
-        console.log(JSON.stringify(obj));
         for (x in obj) {
             let pro = obj[x];
             addOption(pro.nm);
@@ -40,7 +38,6 @@ function validatePass(pass) {
 }
 
 function addOption(optData) {
-    console.log(optData);
     var sel = document.getElementById('select-province');
     var opt = document.createElement('option');
     opt.appendChild(document.createTextNode(optData));
@@ -143,7 +140,6 @@ const validateRegister = () => {
 
         if (pass_reg.value != '' && confirm_pass_reg != '') {
             if (!validatePass(pass_reg.value)) {
-                alert('no format');
                 confirm_pass_reg.value = '';
                 pass_reg.classList.remove('is-valid');
                 pass_reg.classList.add('is-invalid');
@@ -158,7 +154,6 @@ const validateRegister = () => {
                 confirm_pass_reg.classList.add('is-valid');
                 pass_help_reg_repeat.style.display = 'none';
             } else {
-                alert('entra en el else');
                 confirm_pass_reg.classList.remove('is-valid');
                 confirm_pass_reg.classList.add('is-invalid');
                 pass_help_reg_repeat.textContent = '*contraseña incorrecta';
