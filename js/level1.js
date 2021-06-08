@@ -67,9 +67,17 @@ const validateLogin = () => {
             pass_login.classList.add('is-invalid');
             pass_help_login.style.display = 'inline';
         } else if (pass_login.value != '') {
-            pass_login.classList.remove('is-invalid');
-            pass_login.classList.add('is-valid');
-            pass_help_login.style.display = 'none';
+            if (validatePass(pass_login.value)) {
+                pass_login.classList.remove('is-invalid');
+                pass_login.classList.add('is-valid');
+                pass_help_login.style.display = 'none';
+            } else {
+                pass_login.classList.add('is-invalid');
+                pass_login.classList.remove('is-valid');
+                pass_help_login.textContent = '*min 8 caracteres 1 mayúscula 1 dígito';
+                pass_help_login.style.display = 'inline';
+            }
+
         }
     });
 }
