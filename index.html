@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sprint 4</a>
+            <div class="collapse navbar-collapse d-flex justify-content-center " id="navbarSupportedContent">
+                <div class="spinner-border text-success mr-2" role="status" id="loading-search">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <form class="d-flex" id="form-search">
+                    <input class="form-control mr-2" id="in-search" type="search" placeholder="buscar..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" id="btn-search" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="card card-body">
+                    <h1 class="title text-center text-white-50">Login</h1>
+                    <form id="form-login">
+                        <div class="form-group">
+                            <label for="in-email-login" class="text-white">Email</label>
+                            <input type="email" class="form-control" id="in-email-login" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text" style="color:red">*campo requerido</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="in-pass-login" class="text-white">Contraseña</label>
+                            <input type="password" class="form-control" id="in-pass-login">
+                            <small id="passHelp" class="form-text" style="color:red">*campo requerido</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <!--FORMULARIO REGISTRO-->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="card card-body">
+                    <h1 class="title text-center text-white-50">Registro</h1>
+                    <form id="form-register">
+                        <div class="form-group">
+                            <label for="in-name-reg" class="text-white">Nombre</label>
+                            <input type="text" class="form-control" id="in-name-reg">
+                            <small id="nameHelpReg" class="form-text" style="color:red">*campo requerido</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="in-email-reg" class="text-white">Email</label>
+                            <input type="email" class="form-control" id="in-email-reg">
+                            <small id="emailHelpReg" class="form-text" style="color:red">*campo requerido</small>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="in-pass-reg" class="form-label text-white">Contraseña</label>
+                                <input type="password" class="form-control" id="in-pass-reg">
+                                <small id="passHelpReg" class="form-text" style="color:red">*campo requerido</small>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="in-pass-reg-repeat" class="form-label text-white">Repite contraseña</label>
+                                <input type="password" class="form-control" id="in-pass-reg-repeat">
+                                <small id="passHelpRegRepeat" class="form-text" style="color:red">*campo
+                                    requerido</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-province" class="text-white" id="title-province">Seleccione su
+                                provincia</label>
+                            <select class="form-control" id="select-province">
+                                <!--RELLENAR OPTIONS DESDE JS-->
+                                <option value="" id="first-opt" selected></option>
+                            </select>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="check-accept">
+                            <label class="form-check-label text-white" id="lbl-check-text" for="check-accept">Acepto
+                                condiciones</label>
+                            <div class="row">
+                                <div class="col-12"><small id="chekHelpReg" class="form-text" style="color:red">*Debe
+                                        aceptar las condiciones</small></div>
+                            </div>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="./bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="./bootstrap/js/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/level1.js"></script>
+
 </body>
+
 </html>
